@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 3000 || process.env.PORT
+const routes = require('./routes/budgetRoute')
 
 // middleware
 app.use(express.json()) // to parse incoming request with JSON payloads
@@ -9,6 +10,8 @@ app.use(express.json()) // to parse incoming request with JSON payloads
 app.get('/', (req, res) => {
   return res.json({ msg: 'hello world' })
 })
+
+app.use('/api/v1', routes)
 
 const start = async () => {
   try {
