@@ -10,4 +10,14 @@ app.get('/', (req, res) => {
   return res.json({ msg: 'hello world' })
 })
 
-app.listen(PORT, () => console.log(`server is running at port ${PORT}`))
+const start = async () => {
+  try {
+    await require('./db')() // connect local mongodb
+    app.listen(PORT, () => console.log(`server is running at port ${PORT}`))
+  } catch (error) {
+    console.log(erro);
+  }
+}
+
+// start
+start()
