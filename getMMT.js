@@ -27,3 +27,4 @@ module.exports = getMMT = () => {
   // console.log(newUTC.join(' '));
   return newUTC.join(' ')
 }
+// getMMT()
