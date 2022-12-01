@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const getMMT = require('../getMMT')
 
 const budgetSchema = new mongoose.Schema({
   time: {
